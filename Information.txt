@@ -1,0 +1,58 @@
+OpenCV is an open source library for computer vision, ML, face detection, etc.
+
+Computer vision is the branch of AI which deals with analysing, manipulating and processing images, videos etc, to extract useful information.
+(If AI is analogous to computer being able to think, CV is computer able to see and understand).
+
+Some key info about images:
+
+    - Images are made out of pixels.
+    - Colour image pixels have three main colours: red, blue, green in varying intensities. 
+    - The values r,b,g vary from 0 to 255.
+    - Gray scale images (black & white) also are represnted by pixel intesity varying from 0 to 255.
+    - Essentially, r=b=g gives a grey shade.
+    - Black => r=b=g=0 (or 0 in gray scale)
+    - White => r=b=g=255 (or 255 in gray scale)
+    - A computer stores images as 2D array of values of pixel intensities(3D array in case of coloued images).
+    - Lesser value indicates darker shade, while higher value indicates brighter shade.
+    - uint8 is the datatype of images
+
+Affine Transformation is transformation that preserves collinearity, parallelism and ratio of distances between points.  
+It can be seen as linear transformation (matrix multiplication) with translation. Both rotation and translation can be pictured as affine transformation.
+    
+Four cc code is a coder decoder program that is used to convert audio/video to difgital files as vice versa.
+Different codecs have different properties etc.
+
+We want to detect as many edges as possible. Noise in a image is a false edge. They can be reduced by smoothening the image/blurring it slightly.
+Useful in self driving cars, etc
+
+Color spaces are a way to represent the color channels present in the image that gives the image that particular hue. 
+Types: BGR, HSV, CMYK
+
+We resize images as it easy and faster to handle. Training NN on resized images with lesser pizels results in less time.
+
+Blur: 
+    low instensity pass filter. 
+    Removes low intensity edges
+    smoothens Images (more like continuous transition than abrupt)
+    noise removal (noise is considered as high intensity)
+
+Erode:
+    erodes away edges/boundaries of foregrounnd object
+    diminish features of foreground object
+    used to reduce white noises
+    shrinks object
+    detach connected objects
+
+Dilate:
+    to make features more prominent
+    usually followed by erosion, to increase object size, without increasing noise 
+    to incrase area of foreground object
+    attach connected objects
+
+Adaptive Thresholding is useful incases of variable lighting in different regions of image
+
+Face Detection is just identifying if a face is present or not (1 or 0). Open cv has pretrained classifiers for this.
+Haar_claasifier for various things: faces, smiles, russian name plate, eye etc. it is done using edges, so gray image is fine.
+min neighbors is to verify if the detection is valid. If u set it to 0 or 1, many unnecessary things are detected. If u keep it 3, it will perform better 
+
+.npy files are faster to read, and used to store numpy arrays, occupy less space

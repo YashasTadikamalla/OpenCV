@@ -1,0 +1,35 @@
+- While defining path in python, use r after =, which stands for raw string.
+
+- cv.imread: loads/reads image from specified path. Has flags to read image as colour/grayscale.
+             Returns np array (2D or 3D)
+- cv.imshow: show the image in a window.
+- img.shape[:2] returns height and width
+- cv.waitKey(x): waits for 'x' milliseconds before terminating. 
+                 If 0 is passed, it waits indefinitey, before we terminate (pressing any key)
+                 Returns ASCII value of key pressed
+- cv.destroyAllWindows(): destroys all the windows created ad free memory
+- cv.resize(): resize an image
+- cv.rectangle(): uses top left and bottom right pixel coordinates. edits original
+                  to fill the rectangle, use cv.FILLED or -1 for thickness attribute
+- cv.circle(): to draw circle
+- cv.split(): splits image into 3, b,g,r.
+- cv.putText(): uses bottom left pixel coordinate. edits original
+- some commands use pixel location, some use array notation of rows and columns
+  origin is at top left
+  height = y
+  width = x
+- cv.addWeighted(),cv.subtract,cv.bitwise_xor,etc can also be done on images of same size
+- cv.erode(): erodes away the boundaries
+- cv.threshold has different thresholding techniques. if pixel instensity is greater than threshold, it is set to maxval in case of binary threshold.
+  adaptive thresh uses kernel logic to find adaptive thresholds.
+
+
+
+
+- cv.VideoCapture(path/0/1): to capture video in the path/webcam/camera 2
+- we read videos frame by frame
+- ord('q') returns ASCII of q
+- cv.VideoWriter: write video captured
+- .get, .set work only for web camera
+- .resize works for frames (images or videos as frames but not live stream)
+- fourcc 
